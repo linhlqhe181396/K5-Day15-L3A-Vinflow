@@ -35,3 +35,6 @@ evidence/**/raw-*
 # Nguyên file data BTC cấp (data/preclass, data/training-ops… của repo đề): để ở đây, không commit
 data-btc
 data-btc/
+
+# Giữ bản Parquet gốc cục bộ; repo dùng bản CSV
+data/raw/food-delivery-support-tickets.parquet
