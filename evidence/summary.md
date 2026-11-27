@@ -37,6 +37,14 @@ Chạy `python evidence/count.py` cho kết quả: `missing_item` **1.309/10.153
 
 ## 4. Trích dẫn và giới hạn
 
-`data/raw/survey.csv` chỉ lưu **đáp án chọn sẵn**, không có câu trả lời tự do để trích nguyên văn từ người dùng. Các cụm trong bảng trên là nội dung phương án khảo sát, không được ghi thành lời kể hoặc phỏng vấn. Năm ví dụ trong `evidence/data-mining.md` là câu do mô hình tạo, không phải trích dẫn người thật.
+`data/raw/survey.csv` chỉ lưu **đáp án chọn sẵn**, không có câu trả lời tự do để trích nguyên văn từ người dùng. Năm ví dụ dưới đây là **tổ hợp phương án một phiếu đã chọn**, ghi đúng từng ô và số dòng CSV; không được trình bày như lời kể tự do hay phỏng vấn:
+
+1. Dòng CSV 2: sự cố “thiếu món / topping”; kết quả “Có, nhưng xử lý chậm / chưa thỏa đáng / phải làm đi làm lại”; vướng “Khó chuyển sang nhân viên hỗ trợ khi gặp trường hợp đặc biệt”.
+2. Dòng CSV 3: sự cố “thiếu món / topping”; kết quả “Có, nhưng xử lý chậm / chưa thỏa đáng / phải làm đi làm lại”; vướng “Phải cung cấp lại thông tin/chứng cứ nhiều lần hoặc chờ phản hồi quá lâu”.
+3. Dòng CSV 4: sự cố “thiếu món / topping”; kết quả “Có, và đã được xử lý xong”; vướng “Khó chuyển sang nhân viên hỗ trợ khi gặp trường hợp đặc biệt”.
+4. Dòng CSV 5: sự cố “gặp cả thiếu món và giao trễ”; kết quả “Có, và đã được xử lý xong”; vướng “Phải cung cấp lại thông tin/chứng cứ nhiều lần hoặc chờ phản hồi quá lâu”.
+5. Dòng CSV 6: sự cố “giao trễ”; kết quả “Không gửi vì thấy thao tác rườm rà / mất thời gian / không kỳ vọng được giải quyết nhanh”; vướng “Bot/hệ thống trả lời theo menu có sẵn, không hiểu đúng tình huống của mình”.
+
+Năm ví dụ trong `evidence/data-mining.md` là câu do mô hình tạo, không phải trích dẫn người thật.
 
 Khảo sát cho thấy trong **nhóm 30 người đã trả lời**, có người gặp khó khi gửi hoặc theo dõi khiếu nại; **24/30** chọn một trong hai phương án “xử lý chậm/chưa thỏa đáng/phải làm lại” hoặc “không gửi vì thấy rườm rà/mất thời gian/không kỳ vọng”. Điều này hỗ trợ giả thuyết pain của D1 **trong mẫu khảo sát này**. Chưa biết mẫu có đại diện cho người dùng app nói chung hay không, và chưa có bằng chứng độc lập về thời gian xử lý thực tế hay mức bồi thường phù hợp.

@@ -13,7 +13,7 @@ Không dùng `sentiment` và `urgency` làm nhãn chuẩn vì tác giả công b
 
 | | |
 |---|---|
-| Dùng để làm gì | Nguồn câu khiếu nại tiếng Anh cho bộ câu thử `eval/benchmark.csv` (7/15 câu từ `data_that`, gồm `missing_item`, `late_delivery`, `wrong_order`, `payment_issue`) và tham khảo phân loại ý định cho lát cắt Track D |
+| Dùng để làm gì | Nguồn 7 câu khiếu nại tiếng Anh giả lập cho `eval/benchmark.csv` (ghi `sinh_seed`, gồm `missing_item`, `late_delivery`, `wrong_order`, `payment_issue`) và tham khảo phân loại ý định cho lát cắt Track D |
 | Từ đâu | Bộ dữ liệu công khai Hugging Face (`OrSabbach/food-delivery-support-tickets`, giấy phép MIT) do nhóm tải về và lưu tại `data/raw/food-delivery-support-tickets.csv` |
 | Xử lý những bước gì | Chuyển từ Parquet sang CSV (UTF-8), kiểm tra phân bố 8 `category` (10.153 dòng, 10 cột), chọn lọc mẫu đại diện cho từng nhóm `thuong`/`kho` đưa vào `eval/benchmark.csv` |
 | Số dòng / số đoạn | 10.153 dòng tổng cộng (trong đó 1.309 `missing_item`, 1.309 `late_delivery`); trích 7 mẫu vào `eval/benchmark.csv` |
@@ -39,4 +39,4 @@ File CSV để dùng trong repo: `data/raw/survey.csv` (30 dòng, 8 cột — g�
 
 `data/orders.json` chứa 3 đơn giả (`VF-1042`, `VF-2088`, `VF-1001`) với tên món, giá món, tổng đơn, số phút giao trễ và số khiếu nại trong 30 ngày. `data/policy.md` ghi CS-01…CS-04, mọi hạn mức đều *(tự ước tính)*. Hai file chỉ dùng để chạy công cụ tra đơn và kiểm hạn mức trong bản CP2; không phải đơn hoặc chính sách của app thật. `VF-9999` cố ý không có để thử nhánh chuyển người.
 
-**Data `synthetic` (nhóm tự sinh):** Các câu `tu_viet` (5/15 câu trong `eval/benchmark.csv`) do nhóm tự viết bằng tiếng Anh để phủ đủ các ca vượt hạn mức (lớp 1/3), đe doạ leo thang (lớp 4), ngoài phạm vi và 2 câu tấn công (`tu_choi`). Data tự dựng **không phải bằng chứng pain**.
+**Data `synthetic` (nhóm tự sinh):** 13/20 câu `tu_viet` trong `eval/benchmark.csv` do nhóm tự viết, trong đó 3 câu lấy **ý tưởng** từ kết quả khảo sát nhưng không phải lời nguyên văn của người trả lời. 7/20 câu `sinh_seed` lấy từ dataset mô hình tạo. Data tự dựng **không phải bằng chứng pain**.

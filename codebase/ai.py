@@ -18,6 +18,10 @@ Nối model thật: điền .env (chép từ .env.example), rồi viết nhánh 
 (có ví dụ OpenAI, Claude, model chạy trên máy, và cách nối nhà cung cấp khác). Không dán API key vào file này.
 """
 import os
+import json
+import urllib.error
+import urllib.request
+from urllib.parse import quote
 
 from tracing import model_call
 
@@ -49,8 +53,26 @@ def call_model(system: str, user: str) -> dict:
         last = (user.strip().splitlines() or [""])[-1]
         return {"text": "[câu trả lời giả — chưa nối model] " + last[:60], "model": "fake", "tokens_in": 0, "tokens_out": 0}
 
-    # NHÓM VIẾT: gọi model thật ở đây (theo MODEL_PROVIDER, MODEL_NAME, API_KEY) rồi trả đúng 4 khoá.
-    # Ví dụ chép được cho từng nhà cung cấp: docs/connect-model.md mục 2.
+    if MODEL_PROVIDER == "gemini":
+        if not MODEL_NAME or not API_KEY:
+            raise ValueError("Thiếu MODEL_NAME hoặc API_KEY trong .env")
+        url = "https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent" % quote(MODEL_NAME, safe="")
+        body = {"systemInstruction": {"parts": [{"text": system}]},
+                "contents": [{"role": "user", "parts": [{"text": user}]}],
+                "generationConfig": {"responseMimeType": "application/json"}}
+        request = urllib.request.Request(
+            url, data=json.dumps(body).encode("utf-8"), method="POST",
+            headers={"Content-Type": "application/json", "x-goog-api-key": API_KEY})
+        try:
+            with urllib.request.urlopen(request, timeout=60) as response:
+                data = json.load(response)
+        except urllib.error.HTTPError as error:
+            raise RuntimeError("Gemini HTTP %s: %s" % (error.code, error.read().decode("utf-8", "replace")[:250])) from error
+        parts = data["candidates"][0]["content"]["parts"]
+        usage = data["usageMetadata"]
+        return {"text": "".join(part.get("text", "") for part in parts), "model": MODEL_NAME,
+                "tokens_in": int(usage["promptTokenCount"] + usage.get("toolUsePromptTokenCount", 0)),
+                "tokens_out": int(usage.get("candidatesTokenCount", 0) + usage.get("thoughtsTokenCount", 0))}
     raise NotImplementedError(
         "chưa viết phần gọi model thật cho MODEL_PROVIDER=%s trong codebase/ai.py — xem docs/connect-model.md"
         % MODEL_PROVIDER)
