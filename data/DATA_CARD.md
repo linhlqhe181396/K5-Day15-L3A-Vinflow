@@ -35,4 +35,8 @@ File CSV để dùng trong repo: `data/raw/survey.csv` (30 dòng, 8 cột — g�
 | Nhãn | `thật` (phản hồi người dùng thật) |
 | Giới hạn | Cỡ mẫu `n = 30`, câu hỏi dạng lựa chọn (không có câu trả lời mở nguyên văn) và thu thập trong 1 ngày; không đủ chi tiết từng mã đơn nên kết hợp với `food-delivery-support-tickets.csv` để tạo đầu vào tiếng Anh cho `eval/benchmark.csv` |
 
+## Dataset 3 · Đơn hàng và chính sách giả lập cho bản chạy thử
+
+`data/orders.json` chứa 3 đơn giả (`VF-1042`, `VF-2088`, `VF-1001`) với tên món, giá món, tổng đơn, số phút giao trễ và số khiếu nại trong 30 ngày. `data/policy.md` ghi CS-01…CS-04, mọi hạn mức đều *(tự ước tính)*. Hai file chỉ dùng để chạy công cụ tra đơn và kiểm hạn mức trong bản CP2; không phải đơn hoặc chính sách của app thật. `VF-9999` cố ý không có để thử nhánh chuyển người.
+
 **Data `synthetic` (nhóm tự sinh):** Các câu `tu_viet` (5/15 câu trong `eval/benchmark.csv`) do nhóm tự viết bằng tiếng Anh để phủ đủ các ca vượt hạn mức (lớp 1/3), đe doạ leo thang (lớp 4), ngoài phạm vi và 2 câu tấn công (`tu_choi`). Data tự dựng **không phải bằng chứng pain**.

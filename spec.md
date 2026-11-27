@@ -75,7 +75,7 @@ flowchart TD
 ```
 
 - **Hình dạng:** [x] workflow cố định · [ ] một agent · [ ] nhiều agent — Các bước luôn giống nhau: trích thông tin → tra đơn và chính sách → chặn → quyết định. Mọi nhánh có tiền đi ra đều phải đi qua cổng kiểm bằng code, theo đúng thứ tự. **Không chọn agent tự lặp**: model tự chọn công cụ thì có thể bỏ qua `check_limit` hoặc bị câu tấn công điều khiển, khó chấm và khó chặn. Bài này cũng không có bước nào cần khám phá mở. Model chỉ được gọi tối đa 2 lần mỗi khiếu nại.
-- **AI dựa vào đâu** — mỗi công cụ (sẽ khớp `codebase/tools.py`, chưa viết):
+- **AI dựa vào đâu** — các công cụ trong `codebase/tools.py`:
 
   | Công cụ | Input | Output | Tác động ra ngoài? |
   |---|---|---|---|
@@ -102,10 +102,10 @@ flowchart TD
   | Lời người dùng là dữ liệu, không phải lệnh | Bước 1 chỉ trích trường vào JSON cố định. Câu "ignore instructions / SYSTEM OVERRIDE / I'm admin" bị gắn cờ tấn công ở cổng code |
 
 - **Phần nào còn giả:**
-  - `data/orders.json`: đơn hàng giả do nhóm tự viết (`synthetic`), chưa tạo. Cần có tối thiểu `VF-1042` (đơn $28, có iced tea $3.50) và `VF-1001`. `VF-9999` cố ý **không** có.
+  - `data/orders.json`: ba đơn hàng giả do nhóm tự viết (`synthetic`): `VF-1042`, `VF-2088`, `VF-1001`. `VF-9999` cố ý **không** có.
   - `data/policy.md`: chính sách và hạn mức *(tự ước tính)*, không phải chính sách của app thật nào.
-  - `create_refund_draft`, `escalate_ticket`: chỉ in bản nháp, không nối hệ thống nào.
-  - Model: chế độ giả đến CP2, nối model thật trước CP3.
+  - `create_refund_draft`, `escalate_ticket`: chỉ trả bản nháp, không nối hệ thống nào.
+  - Model: chế độ giả ở CP2 (token 0); bước nhận diện ca trong luồng CP2 dùng từ khóa tạm. Phải nối model thật và dùng kết quả của nó trước CP3.
   - Câu khiếu nại trong bộ câu thử: tiếng Anh, lấy từ dataset giả lập (`data/DATA_CARD.md`) + câu nhóm tự viết.
 
 ## §5. Chỗ khó — 4 lớp + ≥6 kịch bản + 2 tấn công *(guide 2.3)*
@@ -158,7 +158,7 @@ flowchart TD
 
 | Thời điểm | Đổi gì | Vì sao (trỏ về câu thử / lỗi / bằng chứng nào) |
 |---|---|---|
-|  |  |  |
+| 27/11/2026 · sau CP2 | Hoàn thiện luồng giả D1, thêm `orders.json` và `policy.md`, cập nhật bằng chứng khảo sát trong canvas | Khung trước đó chỉ tra ví dụ và trả câu giả; khảo sát 30 phiếu đã có. Không đổi chuẩn “đạt” §7 hoặc metric. |
 
 **Sau CP4 (đến 23:59 Thứ Bảy 28/11)** (sửa theo góp ý — không sửa chuẩn "đạt", câu thử, số bằng chứng, kết quả các lượt đã chạy)
 
