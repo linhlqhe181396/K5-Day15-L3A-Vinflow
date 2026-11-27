@@ -6,7 +6,7 @@
 
 - Tên nhóm: Vinflow
 - Lớp: L3A
-- Track: ____
+- Track: D
 - Link repo: https://github.com/linhlqhe181396/K5-Day15-L3A-Vinflow
 
 | STT | Họ và tên | Mã học viên | Vai trò | Phần việc chính |
