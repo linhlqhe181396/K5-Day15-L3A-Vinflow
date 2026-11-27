@@ -3,7 +3,7 @@
 > Làm ở guide bước 5.1. Luật: **không có bằng chứng thì không có slide** — mỗi trang ≥1 con số / trích dẫn có nguồn / kết quả đo.
 > Xuất PDF thành `demo-slides.pdf` ở thư mục gốc repo, nộp tại CP4 14:30 Thứ Bảy 28/11. Định dạng nào cũng được (PDF, PPTX, HTML…); hoặc nộp link slide (Drive, Canva, Google Slides…) ở form CP4, để ai có link cũng xem được.
 
-Đã có bản trình chiếu HTML tại `slides/demo-slides.html` (7 trang, có nguồn ở chân từng trang). Có thể mở trong Chrome và dùng **Print → Save as PDF** nếu nhóm muốn nộp PDF. Nội dung chi phí được ghi là ước tính vì mô phỏng 50 phiên chưa chạy hợp lệ. Nhóm phân công người nói và tự quay video demo.
+Đã có bản trình chiếu HTML tại `slides/demo-slides.html` (7 trang, có nguồn ở chân từng trang). Nhóm cần hoàn thiện đủ 8 trang theo dàn ý, cập nhật số từ `cost/simulate-1.csv` (50 phiên: 36 không lỗi, 14 lỗi), rồi xuất `demo-slides.pdf` ở thư mục gốc. Nhóm tự quay video demo.
 
 | # | Trang | Có gì | Số lấy từ | Xong |
 |---|---|---|---|---|
@@ -22,4 +22,7 @@ Ai nói trang nào (mỗi người ≥1 phần):
 
 | Trang | Người nói |
 |---|---|
-| | |
+| 1, 2 | Nguyễn Hữu Tiến |
+| 3, 4 | Lê Quang Linh |
+| 5, 8 | Nguyễn Quang Duy |
+| 6, 7 | Mai Tuấn Anh |

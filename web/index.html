@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#132c3e">
+  <title>Vinflow · Hỗ trợ đơn đồ ăn</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="pixel-strip" aria-hidden="true"></div>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Vinflow, về đầu trang">
+        <span class="brand-icon" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        <span>VIN<span class="brand-accent">FLOW</span><small>FOOD SUPPORT LAB</small></span>
+      </a>
+      <div class="top-meta"><span class="top-label">BẢN CHẠY THỬ · D1</span><span class="live-badge" id="model-badge"><i></i> ĐANG KIỂM TRA</span></div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="title">
+        <div>
+          <div class="eyebrow"><span class="tiny-square"></span> HỖ TRỢ ĐƠN HÀNG / BETA 01</div>
+          <h1 id="title">Chuyện đơn hàng,<br><em>kể một lần thôi.</em></h1>
+          <p>Đơn thiếu món hay giao trễ? Hãy kể tự nhiên. Vinflow sẽ đối chiếu đơn, kiểm tra chính sách và đề xuất bước tiếp theo.</p>
+          <div class="hero-pills"><span>01 · KỂ SỰ CỐ</span><span>02 · KIỂM TRA</span><span>03 · XEM HƯỚNG XỬ LÝ</span></div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="spark spark-one">✦</div><div class="spark spark-two">✳</div>
+          <div class="pixel-ticket">
+            <div class="ticket-top"><b>VIN / 001</b><span>● ● ●</span></div>
+            <div class="pixel-food"><div class="food-lid"></div><div class="food-box"><span>✦</span></div></div>
+            <div class="ticket-line wide"></div><div class="ticket-line"></div>
+            <div class="ticket-stamp">NEED HELP?</div>
+          </div>
+          <div class="art-caption">MỖI ĐƠN ĐỀU CÓ MỘT CÂU CHUYỆN.</div>
+        </div>
+      </section>
+
+      <div class="workspace">
+        <section class="panel form-panel" aria-labelledby="form-title">
+          <div class="panel-head"><span class="step">01 / 02</span><span class="head-rule"></span><span class="panel-kicker">GỬI YÊU CẦU</span></div>
+          <h2 id="form-title">Bạn đang gặp chuyện gì?</h2>
+          <p class="panel-intro">Bạn có thể viết bằng tiếng Việt hoặc tiếng Anh. Nếu biết mã đơn, hãy thêm vào để nhận phương án cụ thể hơn.</p>
+
+          <div class="examples-label"><span>THỬ NHANH VỚI ĐƠN MẪU</span><span class="example-note">DỮ LIỆU GIẢ LẬP</span></div>
+          <div class="examples" role="group" aria-label="Tình huống mẫu">
+            <button class="example-card" type="button" data-example="Đơn VF-1042 của tôi thiếu món iced tea. Tôi muốn được hỗ trợ phần món bị thiếu.">
+              <span class="example-icon">01</span><span><strong>Thiếu món</strong><small>VF-1042 · iced tea</small></span><span class="arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="example-card" type="button" data-example="Đơn VF-2088 của tôi giao trễ 65 phút. Nhờ kiểm tra giúp.">
+              <span class="example-icon">02</span><span><strong>Giao trễ</strong><small>VF-2088 · 65 phút</small></span><span class="arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="example-card" type="button" data-example="Tôi đặt món chay nhưng trong món có thịt gà. Tôi lo về thành phần món ăn.">
+              <span class="example-icon">03</span><span><strong>Ca cần nhân viên</strong><small>Kiểm tra an toàn món ăn</small></span><span class="arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+
+          <form id="complaint-form">
+            <label for="complaint">NỘI DUNG KHIẾU NẠI <span>*</span></label>
+            <div class="textarea-wrap">
+              <textarea id="complaint" name="complaint" maxlength="2000" rows="6" required placeholder="Ví dụ: Đơn VF-1042 của tôi thiếu iced tea. Tôi muốn được kiểm tra phần món bị thiếu..."></textarea>
+              <span class="char-count"><span id="char-count">0</span>/2000</span>
+            </div>
+            <div class="form-footer"><span>⌘ / CTRL + ENTER ĐỂ GỬI</span><button class="submit" type="submit" id="submit-btn"><span id="submit-label">KIỂM TRA ĐƠN HÀNG</span><b aria-hidden="true">→</b></button></div>
+          </form>
+        </section>
+
+        <section class="panel result-panel" aria-labelledby="result-title">
+          <div class="panel-head"><span class="step step-alt">02 / 02</span><span class="head-rule"></span><span class="panel-kicker">KẾT QUẢ</span></div>
+          <h2 id="result-title">Hướng xử lý</h2>
+          <p class="panel-intro">Phản hồi từ AI và công cụ đối chiếu đơn sẽ hiện ở đây.</p>
+
+          <div class="result-empty" id="result-empty">
+            <div class="empty-art" aria-hidden="true"><span>✦</span><div class="empty-face">•_•</div><i></i></div>
+            <strong>ĐANG CHỜ CÂU CHUYỆN CỦA BẠN</strong>
+            <p>Chọn một tình huống mẫu hoặc nhập khiếu nại để bắt đầu.</p>
+          </div>
+          <div class="result-content" id="result-content" hidden aria-live="polite">
+            <div class="result-status"><span class="status-dot"></span><span id="result-status">ĐÃ XỬ LÝ</span></div>
+            <div class="result-paper"><div class="paper-top"><span>VINFLOW / PHẢN HỒI</span><span>✦</span></div><p id="result-output"></p><div class="paper-bottom">BẢN NHÁP · CẦN NGƯỜI DUYỆT NẾU CÓ BỒI THƯỜNG</div></div>
+            <div class="result-details"><div><span>MODEL</span><strong id="metric-model">—</strong></div><div><span>LƯỢT GỌI</span><strong id="metric-calls">—</strong></div><div><span>TOKEN VÀO / RA</span><strong id="metric-tokens">—</strong></div></div>
+            <button class="copy-btn" type="button" id="copy-btn">SAO CHÉP PHẢN HỒI <span aria-hidden="true">↗</span></button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer><div><span class="footer-mark">✦ VIN<span>FLOW</span></span><span>HỖ TRỢ RÕ RÀNG, TỪNG ĐƠN MỘT.</span></div><p>Demo dùng đơn và chính sách giả lập. Không chuyển tiền hay cấp voucher thật.</p></footer>
+  </div>
+</body>
+</html>

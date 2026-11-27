@@ -11,10 +11,10 @@
 
 | STT | Họ và tên | Mã học viên | Vai trò | Phần việc chính |
 |---|---|---|---|---|
-| 1 | Lê Quang Linh | 2A202603583 | Đội trưởng | Làm việc cùng các thành viên |
-| 2 | Nguyễn Hữu Tiến | 2A202603598 | Thành viên | Làm việc cùng các thành viên |
-| 3 | Mai Tuấn Anh | 2A202603574 | Thành viên | Làm việc cùng các thành viên |
-| 4 | Nguyễn Quang Duy | 2A202603462 | Thành viên | Làm việc cùng các thành viên |
+| 1 | Lê Quang Linh | 2A202603583 | Đội trưởng | Điều phối, repo, UI demo, đối chiếu độc lập 5 câu |
+| 2 | Nguyễn Hữu Tiến | 2A202603598 | Thành viên | Khảo sát, bằng chứng pain, impact, spec sản phẩm |
+| 3 | Mai Tuấn Anh | 2A202603574 | Thành viên | Agent, Gemini, công cụ an toàn, mô phỏng chi phí |
+| 4 | Nguyễn Quang Duy | 2A202603462 | Thành viên | Benchmark, chấm 30 câu, báo cáo đánh giá, slide |
 
 **Quy tắc điền**
 - **Lớp:** `L3A` hoặc `L3B`. **Track:** một chữ `A` (EdTech), `B` (Y tế), `C` (Du lịch), `D` (Thương mại điện tử), `E` (Tài chính) hoặc `F` (Làn khác). **Link repo:** link GitHub công khai của nhóm.

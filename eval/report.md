@@ -47,8 +47,8 @@ Trong các câu có output, lỗi lặp lại là chỉ hỏi mã đơn mà chư
 
 ## 4. Còn lại
 
-- Lỗi chưa sửa: B21–B22 bị phân loại nhầm thiếu món thành ngoài phạm vi; B17 HTTP 503, B20 timeout. Lượt mô phỏng chi phí chưa có kết quả hợp lệ vì môi trường agent bị chặn mạng.
-- Nếu có thêm 1 tuần: giảm lỗi phân loại B21–B22, chấm độc lập 5 output, thử với người dùng thật có đồng ý; đo chi phí và tỷ lệ lỗi API qua nhiều lượt.
+- Lỗi chưa sửa: B21–B22 bị phân loại nhầm thiếu món thành ngoài phạm vi; B17 HTTP 503, B20 timeout. `cost/simulate-1.csv` đã ghi 50 phiên, trong đó 36 phiên không lỗi và 14 phiên lỗi; xem giả định và kết quả tại `cost/cost-estimate.md`.
+- Nếu có thêm 1 tuần: giảm lỗi phân loại B21–B22, thử với người dùng thật có đồng ý; đo chi phí và tỷ lệ lỗi API qua nhiều lượt. Trước khi nộp, một thành viên không viết chuẩn §7 cần chấm độc lập 5 output theo `eval/second-review.md`.
 
 ## Lượt 3 — sau thay đổi logic
 

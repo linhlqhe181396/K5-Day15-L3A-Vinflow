@@ -28,12 +28,12 @@ File CSV để dùng trong repo: `data/raw/survey.csv` (30 dòng, 8 cột — g�
 | | |
 |---|---|
 | Dùng để làm gì | Bằng chứng pain thực tế từ người trả lời (`evidence/summary.md`), căn cứ đặt `why` cho `eval/metric_spec.yaml`, và nguồn tạo 10 ca diễn đạt lại từ phiếu khảo sát trong `eval/benchmark.csv` (B21–B30) |
-| Từ đâu | Khảo sát trực tuyến (Google Forms) do nhóm tự thu thập từ người đặt đồ ăn qua app (ShopeeFood, GrabFood, BeFood, Xanh SM Ngon…) |
+| Từ đâu | [Google Forms do nhóm cung cấp](https://docs.google.com/forms/d/e/1FAIpQLSfJh11wzUJBxc-Z6II5ogO9SCjTjpNJI6JBGqDz-x1VH9yrAA/viewform?usp=publish-editor), xuất CSV 30 phản hồi. Theo nhóm, gửi cho người dùng app đặt đồ ăn, chủ yếu bạn bè/người quen đồng lứa; nhóm xác nhận 30/30 phiếu ngoài nhóm. CSV ẩn danh không tự kiểm được danh tính/kênh phát. |
 | Xử lý những bước gì | Không thu thập họ tên, email, SĐT; giữ nguyên 30 dòng; thống kê tỷ lệ phân bố từng câu hỏi. Script `evidence/derive_survey_cases.py` chuyển lựa chọn của 10 phiếu thành câu ngôi thứ nhất, giữ các khả năng “hoặc” trong đáp án gốc, không thêm mã đơn/món/tiền và ghi rõ số dòng nguồn. Đây là diễn đạt lại, không phải lời kể nguyên văn. |
 | Số dòng / số đoạn | 30 phản hồi (30/30 từng đặt đồ ăn trong 1 tháng qua và từng gặp thiếu món/giao trễ; 11/30 gặp cả hai; 24/30 không gửi khiếu nại hoặc thấy xử lý chậm/rườm rà) |
 | Phiên bản / ngày lấy | Thu thập ngày 27/11/2026 (18:05–18:19) |
 | Nhãn | `thật` (phản hồi người dùng thật) |
-| Giới hạn | Cỡ mẫu `n = 30`, câu hỏi dạng lựa chọn (không có câu trả lời mở nguyên văn) và thu thập trong 1 ngày; chưa có tài liệu xác minh đối tượng ngoài nhóm/kênh phát form. Các câu diễn đạt lại không chứng minh lời người dùng đã nói đúng những chữ đó, chỉ bảo toàn nội dung phương án họ chọn. |
+| Giới hạn | Cỡ mẫu `n = 30`, câu hỏi dạng lựa chọn (không có câu trả lời mở nguyên văn) và thu thập trong 1 ngày; 30/30 ngoài nhóm là xác nhận của nhóm, không kiểm độc lập được từ CSV ẩn danh. Kênh phát cụ thể chưa ghi. Các câu diễn đạt lại chỉ bảo toàn nội dung phương án đã chọn. |
 
 ## Dataset 3 · Đơn hàng và chính sách giả lập cho bản chạy thử
 

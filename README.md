@@ -1,38 +1,10 @@
-> Đây là khung repo nộp bài. Điền mọi chỗ `____`, giữ nguyên tên các mục. **Mục 0 xoá đi sau khi tạo repo xong.**
-> Giờ, mốc, luật, rubric: xem `README.md`, `02-guide.md`, `03-rubric.md` trong repo đề (bộ đề BTC phát).
+# Vinflow — Hỗ trợ khiếu nại đơn giao đồ ăn
 
-# [Tên nhóm] — [Tên lát cắt]
+Nhóm L3A · Track D1. Bản chạy thử nhận khiếu nại thiếu món hoặc giao trễ, dùng Gemini phân loại và code đối chiếu đơn/chính sách giả lập trước khi đề xuất phương án chờ duyệt.
 
-**Thành viên, lớp, track:** xem [TEAMS.md](TEAMS.md). **Điền TEAMS.md đúng format**: khi chấm và đánh giá, BTC quét file này để ghép điểm cho từng người.
-
-*Lát cắt = phần nhỏ nhất làm xong được trong hackathon: một người dùng · một việc · một quyết định AI · một kết quả.*
+**Bắt đầu:** `python demo.py` mở giao diện web cục bộ; `python run.py` chạy CLI; `python run.py check` kiểm bộ câu thử. Cấu hình Gemini theo `.env.example` và giữ `.env` ngoài Git. Thành viên và phần việc ở [TEAMS.md](TEAMS.md). Bằng chứng ở [evidence/summary.md](evidence/summary.md), kết quả ở [eval/report.md](eval/report.md), chi phí ở [cost/cost-estimate.md](cost/cost-estimate.md).
 
 ---
-
-## 0. Tạo repo nhóm từ khung này *(guide bước 1.0 — xoá mục này khi xong)*
-
-**Hai luật:** repo **mới, công khai (Public)** · tên `K5-Day15-<lớp>-<tên nhóm>`, vd `K5-Day15-L3A-StudyPulse` (tên nhóm viết liền, không dấu). Chép **nội dung bên trong** `starter-repo/` — `README.md`, `run.py` phải nằm ngay ở trang đầu repo.
-
-**(a) Không cần terminal — làm trên web GitHub**
-1. **New repository** → tên theo mẫu → **Public** → không tick thêm gì → tạo.
-2. Trên máy mở thư mục `starter-repo/`, **bật hiện file ẩn** (Mac Finder: `Cmd + Shift + .` · Windows: View → Show → Hidden items) để thấy `.gitignore`, `.env.example`.
-3. Trên repo vừa tạo: **Add file → Upload files** → **kéo thả** tất cả file và thư mục bên trong `starter-repo/` → **Commit changes**. Kéo thả mới giữ được thư mục con; lỗi vì nhiều file quá thì tải từng thư mục.
-4. Kiểm: có `.gitignore` chưa (hay thiếu nhất). Thiếu thì **Add file → Create new file**, tên `.gitignore`, dán nội dung từ máy.
-5. Từ giờ sửa file ngay trên web (biểu tượng bút chì → Commit). Phần code vẫn cần **một** người chạy được trên máy: trước mỗi lượt chạy tải **Code → Download ZIP** về thư mục mới (mang `.env` sang), chạy xong chỉ upload file kết quả và file vừa sửa; trong lúc đang chạy không ai sửa `eval/benchmark.csv` trên web.
-
-**(b) Dùng git**
-```bash
-git clone https://github.com/<tai-khoan>/K5-Day15-L3A-TenNhom.git
-cd K5-Day15-L3A-TenNhom
-cp -R ../duong-dan-toi/starter-repo/. .      # Windows PowerShell: Copy-Item -Recurse -Force ..\duong-dan-toi\starter-repo\* .
-git status                                   # không được có .env, data-btc/
-git add -A && git commit -m "Khung repo từ starter-repo" && git push
-```
-
-**Xong khi:** mở link repo bằng **cửa sổ ẩn danh** thấy được file (link nộp CP1) · đã mời thành viên (Settings → Collaborators) · đã điền `TEAMS.md` và `python run.py check` không báo gì ở phần "Kiểm TEAMS.md".
-
----
-
 ## Nhóm làm gì, khung làm gì
 
 | Nhóm quyết định và viết | Khung làm sẵn (không cần sửa) |
@@ -46,6 +18,12 @@ git add -A && git commit -m "Khung repo từ starter-repo" && git push
 *Ví dụ track A (ví dụ cỡ, không phải lời giải):* nhóm viết công cụ `search_lesson` tra bài pre-class đã đánh mã đoạn, luồng "tra đoạn → model trả lời kèm mã đoạn, không có thì nói không có", metric "mọi khẳng định có mã đoạn đúng", persona "ôn dồn trước kiểm tra". Khung chạy 25 câu thử ra `run-1.csv`, nhóm chấm `pass`, `score` in % đạt; `simulate` chạy 50 phiên ra chi phí / task thành công cho hai model.
 
 ## Chạy trong 3 phút
+
+### Giao diện web để demo
+
+Chạy `python demo.py` tại thư mục repo. Trang sẽ mở ở **http://127.0.0.1:8000**; nếu trình duyệt không tự mở, nhập địa chỉ đó thủ công. Nhấn **Ctrl+C** trong terminal để dừng. Giao diện có ba ca mẫu từ `data/orders.json`, hoặc có thể nhập khiếu nại tự do. Đây là web chạy cục bộ, không cần cài thêm thư viện FE.
+
+Để trình diễn **AI thật**, giữ `MODEL_PROVIDER=gemini`, `MODEL_NAME` và `API_KEY` trong `.env` trên máy demo, rồi khởi động lại `python demo.py`. Nhãn ở góc trên sẽ ghi rõ model thật hay chế độ giả. Đừng chiếu hoặc đưa `.env` vào slide/video. UI gọi chính `answer()` trong `codebase/agent.py`; kết quả bồi thường chỉ là bản nháp chờ duyệt. Nếu API lỗi, UI báo chưa xử lý và cho phép thử lại.
 
 Bộ khung cần **Python 3.10 trở lên** (Python 3.9 có sẵn trên macOS vẫn chạy được, chỉ in một dòng nhắc). **Không cần `pip install`.**
 
@@ -76,6 +54,7 @@ Trong README này lệnh viết là `python …`; máy nhóm cần `python3` hay
 
 | Lệnh | Làm gì |
 |---|---|
+| `python demo.py` | Mở giao diện web demo cục bộ ở `http://127.0.0.1:8000`; dùng cùng `agent.answer()` với bản CLI |
 | `python run.py` | Chạy bản chạy thử (gõ đầu vào, nhận kết quả, kèm số lần gọi model / token) |
 | `python run.py check` | Kiểm `eval/benchmark.csv` (6 cột, số câu, `kho` / `tu_choi`, mã `source`, ô trống, dòng mẫu) `eval/metric_spec.yaml` (≥3 metric điền đủ) và `TEAMS.md` (đúng format để BTC quét). Chỉ cảnh báo, không sửa file |
 | `python run.py eval --try` | **Thử nối model:** chạy 3 câu đầu (`--try 5` = 5 câu) → `eval/run-try.csv`. Thấy "Nối model được" là xong. Không tính là một lượt |

@@ -4,10 +4,10 @@
 
 | Nguồn | Quy mô | Vai trò |
 |---|---:|---|
-| `data/raw/survey.csv` | 30 phiếu, ghi ngày 27/11/2026 | Bằng chứng tự báo cáo về sự cố và trải nghiệm khiếu nại của người trả lời |
+| [`data/raw/survey.csv`](../data/raw/survey.csv), xuất từ [Google Forms do nhóm cung cấp](https://docs.google.com/forms/d/e/1FAIpQLSfJh11wzUJBxc-Z6II5ogO9SCjTjpNJI6JBGqDz-x1VH9yrAA/viewform?usp=publish-editor) | 30 phiếu, ghi ngày 27/11/2026 | Bằng chứng tự báo cáo về sự cố và trải nghiệm khiếu nại của người trả lời |
 | [Food Delivery Support Tickets](https://huggingface.co/datasets/OrSabbach/food-delivery-support-tickets), lưu tại `data/raw/food-delivery-support-tickets.csv` | 10.153 ca **giả lập** | Dữ liệu phát triển và thử khả năng nhận diện loại khiếu nại; không phải bằng chứng pain của người thật |
 
-Nhóm không dùng phỏng vấn. Chưa có tài liệu ghi kênh phát khảo sát, đối tượng được mời và cách xác nhận 30 người trả lời đều ở ngoài nhóm; cần bổ sung thông tin đó nếu dùng ngưỡng khảo sát ≥20 người ngoài nhóm của bài.
+Nhóm không dùng phỏng vấn. Theo nhóm, form được gửi cho người dùng app đặt đồ ăn, chủ yếu bạn bè/người quen đồng lứa; **nhóm xác nhận không thành viên nào điền form và 30/30 phiếu là từ ngoài nhóm**. Kiểm file CSV thấy 30 dòng, đủ 8 ô mỗi dòng và 30 dấu thời gian khác nhau; không có tên, email, số điện thoại. Do CSV ẩn danh, người đọc không thể kiểm độc lập danh tính hoặc loại trừ một người gửi lặp chỉ từ file. Kênh phát cụ thể chưa ghi; chi tiết ở `evidence/survey/verification.md`.
 
 ## 2. Cách đếm khảo sát
 

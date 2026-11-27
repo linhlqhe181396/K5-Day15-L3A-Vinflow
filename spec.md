@@ -15,7 +15,7 @@ Data BTC cấp đã dùng: không có. Nhóm dùng khảo sát tự thu và data
 - Việc họ cố làm xong: gửi yêu cầu xử lý đúng phần thiếu hoặc mức trễ của đơn, rồi biết bước tiếp theo.
 - Cách đang làm: gửi yêu cầu hỗ trợ trong app hoặc bỏ qua. Trong 30 phiếu khảo sát, 19 người nói đã gửi khiếu nại, 11 người nói không gửi vì thấy rườm rà/mất thời gian/không kỳ vọng được giải quyết nhanh. Chưa biết lý do của từng người ngoài phương án họ chọn.
 - Pain: người đặt đồ ăn — khi xử lý đơn thiếu món hoặc giao trễ — phải chờ, lặp lại thông tin hoặc thấy phương án bồi thường không rõ — mất thời gian hoặc bỏ yêu cầu hỗ trợ.
-- Bằng chứng: 13/30 chọn đã gửi nhưng xử lý chậm/chưa thỏa đáng/phải làm lại; 11/30 chọn không gửi vì rườm rà/mất thời gian/không kỳ vọng; 11/30 chọn cung cấp lại thông tin hoặc chờ lâu là điểm vướng nhất. Chi tiết, mẫu số và giới hạn ở `evidence/summary.md`. Chưa xác minh 30 người đều ngoài nhóm.
+- Bằng chứng: 13/30 chọn đã gửi nhưng xử lý chậm/chưa thỏa đáng/phải làm lại; 11/30 chọn không gửi vì rườm rà/mất thời gian/không kỳ vọng; 11/30 chọn cung cấp lại thông tin hoặc chờ lâu là điểm vướng nhất. Nhóm xác nhận 30/30 phiếu từ người ngoài nhóm; CSV ẩn danh không tự kiểm độc lập được điều đó. Chi tiết, mẫu số và giới hạn ở `evidence/summary.md` và `evidence/survey/verification.md`.
 
 ## §2. Impact & quyết định chọn *(guide 1.3)*
 
@@ -155,7 +155,7 @@ flowchart TD
 - Người dùng có thể nhận phương án sai hoặc chậm; quán/sàn có thể chịu chi phí bồi thường sai. Chặn bằng tra đơn, `check_limit`, chuyển nhân viên cho ca rủi ro, và đo lỗi trên benchmark. Lượt 3 đạt 26/30 nhưng vẫn có 2 lỗi API và 2 ca phân loại sai; mô phỏng có 14/50 phiên lỗi. Chưa đủ căn cứ triển khai thật.
 
 ## §10. Phân công & changelog
-- Phân công có tên (theo chặng, chia cặp — guide "Cách chia việc"): __
+- Phân công giai đoạn hoàn thiện (đầu mối trách nhiệm; mỗi người tự xác nhận việc đã trực tiếp làm trong reflection): **Lê Quang Linh** — điều phối, repo, UI demo, chấm độc lập 5 output nếu không phải người chốt §7; **Nguyễn Hữu Tiến** — khảo sát, xác minh nguồn, pain/impact, spec sản phẩm; **Mai Tuấn Anh** — agent, Gemini, công cụ an toàn, mô phỏng chi phí; **Nguyễn Quang Duy** — benchmark, rà cột `pass` cả 30 câu, báo cáo đánh giá, nội dung slide. Mỗi người chuẩn bị giải thích phần của mình và nói ít nhất một phần khi demo.
 - Dùng AI vào việc gì (chi tiết `docs/ai-usage.md`): trợ lý AI hỗ trợ viết code luồng D1, diễn đạt lại câu thử có truy vết, chấm output theo tiêu chí, và soạn tài liệu/slide. Nhóm cần đọc và xác nhận kết quả trước khi nộp; AI không tạo phiếu khảo sát hay trích dẫn người dùng.
 - Nhật ký thay đổi — **mọi thay đổi sau CP2 19:30 Thứ Sáu 27/11 phải có dòng ở đây**:
 
@@ -169,6 +169,7 @@ flowchart TD
 | 27/11/2026 · sau `run-2` | Chấm 30 câu, ghi 6 lỗi API; sửa phản hồi hỏi mã đơn, chuyển nhân viên và bước tiếp theo | `run-2` đạt 9/30; các câu B01–B04, B21–B28 cho thấy phản hồi quá chung. |
 | 27/11/2026 · `run-3` | Chấm lượt mới trên cùng 30 câu; ghi 2 lỗi API và cập nhật hồ sơ đánh giá | Sau sửa đạt 26/30 (87%); B21–B22 vẫn sai phân loại, B17/B20 lỗi kỹ thuật. Không sửa lượt cũ hoặc chuẩn đạt. |
 | 27/11/2026 · `simulate-1` | Mô phỏng 50 phiên từ tỷ lệ đạt `run-3`, cập nhật chi phí và slide | 36 phiên không lỗi, 14 phiên lỗi; báo riêng tỷ lệ lỗi, không dùng 50 phiên như thể đều thành công. |
+| 27/11/2026 · hoàn thiện hồ sơ | Ghi phân công 4 đầu mối, kiểm cấu trúc 30 phiếu khảo sát, tạo phiếu chấm độc lập và bản nháp reflection; sửa thông tin cũ về lượt mô phỏng | Tránh nhận vơ nguồn khảo sát ngoài nhóm hoặc kết quả chấm 5 câu chưa diễn ra; giữ chuẩn §7 và các lượt chạy nguyên trạng. |
 
 **Sau CP4 (đến 23:59 Thứ Bảy 28/11)** (sửa theo góp ý — không sửa chuẩn "đạt", câu thử, số bằng chứng, kết quả các lượt đã chạy)
 
