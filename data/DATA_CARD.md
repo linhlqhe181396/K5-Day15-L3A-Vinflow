@@ -27,16 +27,16 @@ File CSV để dùng trong repo: `data/raw/survey.csv` (30 dòng, 8 cột — g�
 
 | | |
 |---|---|
-| Dùng để làm gì | Bằng chứng pain thực tế từ người dùng (`evidence/summary.md`), căn cứ đặt `why` cho `eval/metric_spec.yaml`, và nguồn thiết kế kịch bản thực tế trong `eval/benchmark.csv` (ca gặp cả thiếu món và giao trễ — 36,7%; ca mức hoàn chưa khớp/chưa rõ lý do — 36,7%) |
+| Dùng để làm gì | Bằng chứng pain thực tế từ người trả lời (`evidence/summary.md`), căn cứ đặt `why` cho `eval/metric_spec.yaml`, và nguồn tạo 10 ca diễn đạt lại từ phiếu khảo sát trong `eval/benchmark.csv` (B21–B30) |
 | Từ đâu | Khảo sát trực tuyến (Google Forms) do nhóm tự thu thập từ người đặt đồ ăn qua app (ShopeeFood, GrabFood, BeFood, Xanh SM Ngon…) |
-| Xử lý những bước gì | Không thu thập họ tên, email, SĐT; giữ nguyên 30 dòng hợp lệ; thống kê tỷ lệ phân bố từng câu hỏi để đưa vào `evidence/summary.md` và đối chiếu thiết kế câu thử |
+| Xử lý những bước gì | Không thu thập họ tên, email, SĐT; giữ nguyên 30 dòng; thống kê tỷ lệ phân bố từng câu hỏi. Script `evidence/derive_survey_cases.py` chuyển lựa chọn của 10 phiếu thành câu ngôi thứ nhất, giữ các khả năng “hoặc” trong đáp án gốc, không thêm mã đơn/món/tiền và ghi rõ số dòng nguồn. Đây là diễn đạt lại, không phải lời kể nguyên văn. |
 | Số dòng / số đoạn | 30 phản hồi (30/30 từng đặt đồ ăn trong 1 tháng qua và từng gặp thiếu món/giao trễ; 11/30 gặp cả hai; 24/30 không gửi khiếu nại hoặc thấy xử lý chậm/rườm rà) |
 | Phiên bản / ngày lấy | Thu thập ngày 27/11/2026 (18:05–18:19) |
 | Nhãn | `thật` (phản hồi người dùng thật) |
-| Giới hạn | Cỡ mẫu `n = 30`, câu hỏi dạng lựa chọn (không có câu trả lời mở nguyên văn) và thu thập trong 1 ngày; không đủ chi tiết từng mã đơn nên kết hợp với `food-delivery-support-tickets.csv` để tạo đầu vào tiếng Anh cho `eval/benchmark.csv` |
+| Giới hạn | Cỡ mẫu `n = 30`, câu hỏi dạng lựa chọn (không có câu trả lời mở nguyên văn) và thu thập trong 1 ngày; chưa có tài liệu xác minh đối tượng ngoài nhóm/kênh phát form. Các câu diễn đạt lại không chứng minh lời người dùng đã nói đúng những chữ đó, chỉ bảo toàn nội dung phương án họ chọn. |
 
 ## Dataset 3 · Đơn hàng và chính sách giả lập cho bản chạy thử
 
 `data/orders.json` chứa 3 đơn giả (`VF-1042`, `VF-2088`, `VF-1001`) với tên món, giá món, tổng đơn, số phút giao trễ và số khiếu nại trong 30 ngày. `data/policy.md` ghi CS-01…CS-04, mọi hạn mức đều *(tự ước tính)*. Hai file chỉ dùng để chạy công cụ tra đơn và kiểm hạn mức trong bản CP2; không phải đơn hoặc chính sách của app thật. `VF-9999` cố ý không có để thử nhánh chuyển người.
 
-**Data `synthetic` (nhóm tự sinh):** 13/20 câu `tu_viet` trong `eval/benchmark.csv` do nhóm tự viết, trong đó 3 câu lấy **ý tưởng** từ kết quả khảo sát nhưng không phải lời nguyên văn của người trả lời. 7/20 câu `sinh_seed` lấy từ dataset mô hình tạo. Data tự dựng **không phải bằng chứng pain**.
+**Nguồn bộ câu thử hiện tại:** 13/30 câu `tu_viet` do nhóm tự viết (3 câu lấy ý tưởng từ khảo sát), 7/30 câu `sinh_seed` từ dataset giả lập, 10/30 câu `data_that` là **diễn đạt lại có truy vết đến từng dòng khảo sát thật**. Lượt `run-1` đã chấm trên 20 câu B01–B20 trước khi thêm B21–B30; không sửa lượt này. Data tự dựng **không phải bằng chứng pain**.

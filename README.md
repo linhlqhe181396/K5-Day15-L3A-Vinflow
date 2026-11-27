@@ -108,14 +108,12 @@ Nhóm dùng stack khác (Node, Streamlit, notebook…): sửa hàm `run_app()` t
 
 | Thành phần | Thật / Giả | Ghi chú |
 |---|---|---|
-| Lời gọi AI ở quyết định trung tâm | **Thật** (bắt buộc từ CP3) | Model: ____ |
-|  |  |  |
+| Lời gọi AI ở quyết định trung tâm | **Thật** từ CP3 | Gemini `gemini-3.1-flash-lite`; `run-1` và `run-2` có token từ API |
+| Đơn hàng và chính sách demo | **Giả lập** | `data/orders.json`, `data/policy.md`; chỉ tạo bản nháp |
 
 ## Dùng AI vào việc gì
 
-2–3 dòng (bắt buộc): nhóm dùng công cụ AI nào để làm gì, người kiểm lại phần nào. Chi tiết: [docs/ai-usage.md](docs/ai-usage.md). Coding agent đọc [AGENTS.md](AGENTS.md).
-
-____
+Trợ lý AI hỗ trợ viết luồng xử lý D1, diễn đạt lại 10 câu thử từ lựa chọn khảo sát có truy vết, chấm output theo tiêu chí đã chốt và soạn báo cáo/slide. Nhóm cần kiểm lại code, từng nhãn nguồn, cột `pass` và số liệu trước khi nộp; AI không tạo phiếu khảo sát hay trích dẫn người dùng. Chi tiết: [docs/ai-usage.md](docs/ai-usage.md). Coding agent đọc [AGENTS.md](AGENTS.md).
 
 ## File mẫu — điền ở bước nào
 

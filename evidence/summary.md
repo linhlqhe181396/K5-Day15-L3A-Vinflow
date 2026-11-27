@@ -47,4 +47,14 @@ Chạy `python evidence/count.py` cho kết quả: `missing_item` **1.309/10.153
 
 Năm ví dụ trong `evidence/data-mining.md` là câu do mô hình tạo, không phải trích dẫn người thật.
 
+**Năm tình huống diễn đạt lại từ phiếu khảo sát** (dùng để thiết kế đầu vào B21–B25, không phải câu trả lời tự do nguyên văn):
+
+1. Dòng CSV 2: Tôi gặp thiếu món hoặc topping; đã gửi hỗ trợ nhưng chọn phương án xử lý chậm/chưa thỏa đáng/phải làm lại. Điểm vướng là khó chuyển sang nhân viên ở ca đặc biệt.
+2. Dòng CSV 3: Tôi gặp thiếu món hoặc topping; đã gửi hỗ trợ nhưng chọn phương án xử lý chậm/chưa thỏa đáng/phải làm lại. Điểm vướng là phải cung cấp lại thông tin/chứng cứ hoặc chờ lâu.
+3. Dòng CSV 5: Tôi gặp cả thiếu món và giao trễ; đã gửi hỗ trợ và được xử lý xong. Điểm vướng là phải cung cấp lại thông tin/chứng cứ hoặc chờ lâu.
+4. Dòng CSV 6: Tôi gặp giao trễ; không gửi khiếu nại vì thấy rườm rà/mất thời gian/không kỳ vọng nhanh. Điểm vướng tôi chọn là bot theo menu không hiểu đúng tình huống.
+5. Dòng CSV 7: Tôi gặp giao trễ; đã gửi hỗ trợ nhưng chọn phương án xử lý chậm/chưa thỏa đáng/phải làm lại. Điểm vướng tôi chọn là bot theo menu không hiểu đúng tình huống.
+
+Cách chuyển đổi và 10 dòng nguồn được giữ trong `evidence/derive_survey_cases.py`. Các trường không có trong phiếu như mã đơn, món cụ thể, số tiền hoàn **không được thêm vào**.
+
 Khảo sát cho thấy trong **nhóm 30 người đã trả lời**, có người gặp khó khi gửi hoặc theo dõi khiếu nại; **24/30** chọn một trong hai phương án “xử lý chậm/chưa thỏa đáng/phải làm lại” hoặc “không gửi vì thấy rườm rà/mất thời gian/không kỳ vọng”. Điều này hỗ trợ giả thuyết pain của D1 **trong mẫu khảo sát này**. Chưa biết mẫu có đại diện cho người dùng app nói chung hay không, và chưa có bằng chứng độc lập về thời gian xử lý thực tế hay mức bồi thường phù hợp.
