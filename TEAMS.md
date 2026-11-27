@@ -15,6 +15,7 @@
 | 2 | Nguyễn Hữu Tiến | 2A202603598 | Thành viên | Làm việc cùng các thành viên |
 | 3 | Mai Tuấn Anh | 2A202603574 | Thành viên | Làm việc cùng các thành viên |
 | 4 | Nguyễn Quang Duy | 2A202603462 | Thành viên | Làm việc cùng các thành viên |
+
 **Quy tắc điền**
 - **Lớp:** `L3A` hoặc `L3B`. **Track:** một chữ `A` (EdTech), `B` (Y tế), `C` (Du lịch), `D` (Thương mại điện tử), `E` (Tài chính) hoặc `F` (Làn khác). **Link repo:** link GitHub công khai của nhóm.
 - Mỗi thành viên một dòng, nhóm **3–5 người**. Thiếu thì thêm dòng theo đúng mẫu, thừa thì xoá dòng.
