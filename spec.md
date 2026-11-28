@@ -145,14 +145,14 @@ flowchart TD
 
 ## §8. Chi phí khi dùng thật *(guide 4.2)*
 - Persona + giá: `cost/personas.yaml`; 100/300/1.000 người và tần suất của 3 persona đều *(tự ước tính)*. Giá Standard paid xem 27/11/2026 từ trang giá Gemini; chi tiết `cost/cost-estimate.md`.
-- Mô phỏng `simulate-1@20261127-211609`: **50 phiên**, seed 42; **36 không lỗi, 14 lỗi**. Token đo trên Flash-Lite, giá Pro chỉ áp giả định trên cùng token. Tỷ lệ đạt lấy từ `run-3` **26/30**.
-- Chi phí/task đạt: **$0,00010** (Flash-Lite) hoặc **$0,00082** (áp giá Pro); chi phí model/tháng ở quy mô cơ sở 300 người: **$0,0629** hoặc **$0,5033**. Ba kịch bản trong `cost/cost-estimate.md`. Phiên lỗi không vào trung bình nên chưa tính gọi lại, hosting và người duyệt.
-- So với impact ở §2: chưa thể tính lợi ích ròng vì impact đo trong 24 người khảo sát, còn quy mô chi phí là giả định. Cần giảm 14/50 phiên lỗi trước khi quyết định triển khai rộng.
+- Mô phỏng `simulate-2@20261128-140209` (`cost/simulate-2.csv`): **50 phiên**, seed 42; **38 không lỗi, 12 lỗi**. Token đo trên `gemini-3.1-flash-lite-preview`, áp giá cho `gemini-3.1-flash-lite` và giả định trên `gemini-3.1-pro-preview` (cùng số token). Tỷ lệ đạt lấy từ `run-3` **26/30 (87%)** trên `gemini-3.1-flash-lite`.
+- Chi phí/task đạt: **$0,000096** (áp giá Flash-Lite) hoặc **$0,00077** (áp giá Pro); chi phí model/tháng ở quy mô cơ sở 300 người: **$0,0628** hoặc **$0,5028** ($0,00021/người/tháng với Flash-Lite). Ba kịch bản trong `cost/cost-estimate.md`. Phiên lỗi không vào trung bình nên chưa tính gọi lại, hosting và người duyệt.
+- So với impact ở §2: chưa thể tính lợi ích ròng vì impact đo trong 24 người khảo sát, còn quy mô chi phí là giả định. Chi phí token rất nhỏ nhưng cần giảm 12/50 phiên lỗi trước khi quyết định triển khai rộng.
 
 ## §9. Rủi ro & an toàn
 - Dữ liệu: bản chạy thử dùng 3 đơn giả trong `data/orders.json`; câu benchmark gồm dataset giả lập, câu nhóm tự viết và diễn đạt lại từ lựa chọn khảo sát. Không đưa file khảo sát gốc hay thông tin cá nhân vào prompt; chỉ gửi câu khiếu nại đang xử lý. Cần kiểm tra dữ liệu thật trước khi dùng ngoài demo.
 - AI **không được** tự hoàn tiền/cấp voucher, bỏ xác minh, vượt CS-01/CS-02, tiết lộ system prompt hoặc tự xử lý ca dị ứng/thanh toán. Công cụ chỉ tạo bản nháp; người duyệt quyết định.
-- Người dùng có thể nhận phương án sai hoặc chậm; quán/sàn có thể chịu chi phí bồi thường sai. Chặn bằng tra đơn, `check_limit`, chuyển nhân viên cho ca rủi ro, và đo lỗi trên benchmark. Lượt 3 đạt 26/30 nhưng vẫn có 2 lỗi API và 2 ca phân loại sai; mô phỏng có 14/50 phiên lỗi. Chưa đủ căn cứ triển khai thật.
+- Người dùng có thể nhận phương án sai hoặc chậm; quán/sàn có thể chịu chi phí bồi thường sai. Chặn bằng tra đơn, `check_limit`, chuyển nhân viên cho ca rủi ro, và đo lỗi trên benchmark. Lượt 3 đạt 26/30 nhưng vẫn có 2 lỗi API và 2 ca phân loại sai; mô phỏng `simulate-2` có 12/50 phiên lỗi. Chưa đủ căn cứ triển khai thật.
 
 ## §10. Phân công & changelog
 - Phân công giai đoạn hoàn thiện (đầu mối trách nhiệm; mỗi người tự xác nhận việc đã trực tiếp làm trong reflection): **Lê Quang Linh** — điều phối, repo, UI demo, chấm độc lập 5 output nếu không phải người chốt §7; **Nguyễn Hữu Tiến** — khảo sát, xác minh nguồn, pain/impact, spec sản phẩm; **Mai Tuấn Anh** — agent, Gemini, công cụ an toàn, mô phỏng chi phí; **Nguyễn Quang Duy** — benchmark, rà cột `pass` cả 30 câu, báo cáo đánh giá, nội dung slide. Mỗi người chuẩn bị giải thích phần của mình và nói ít nhất một phần khi demo.
@@ -170,6 +170,7 @@ flowchart TD
 | 27/11/2026 · `run-3` | Chấm lượt mới trên cùng 30 câu; ghi 2 lỗi API và cập nhật hồ sơ đánh giá | Sau sửa đạt 26/30 (87%); B21–B22 vẫn sai phân loại, B17/B20 lỗi kỹ thuật. Không sửa lượt cũ hoặc chuẩn đạt. |
 | 27/11/2026 · `simulate-1` | Mô phỏng 50 phiên từ tỷ lệ đạt `run-3`, cập nhật chi phí và slide | 36 phiên không lỗi, 14 phiên lỗi; báo riêng tỷ lệ lỗi, không dùng 50 phiên như thể đều thành công. |
 | 27/11/2026 · hoàn thiện hồ sơ | Ghi phân công 4 đầu mối, kiểm cấu trúc 30 phiếu khảo sát, tạo phiếu chấm độc lập và bản nháp reflection; sửa thông tin cũ về lượt mô phỏng | Tránh nhận vơ nguồn khảo sát ngoài nhóm hoặc kết quả chấm 5 câu chưa diễn ra; giữ chuẩn §7 và các lượt chạy nguyên trạng. |
+| 28/11/2026 · trước CP4 | Chạy mô phỏng `simulate-2@20261128-140209` (50 phiên, seed 42, đo token trên `gemini-3.1-flash-lite-preview`), cập nhật `cost/cost-estimate.md` và `spec.md` §8–§9 | Đồng bộ số liệu mô phỏng mới (38 phiên không lỗi, 12 phiên lỗi) trước mốc CP4 14:30; giữ nguyên `simulate-1`, các lượt eval và chuẩn §7. |
 
 **Sau CP4 (đến 23:59 Thứ Bảy 28/11)** (sửa theo góp ý — không sửa chuẩn "đạt", câu thử, số bằng chứng, kết quả các lượt đã chạy)
 

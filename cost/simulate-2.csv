@@ -1,0 +1,101 @@
+﻿run_id,session,persona,turns,inputs,model,model_calls,tool_calls,tokens_in,tokens_out,latency_s,error,tokens_by_model
+simulate-2@20261128-140209,S001,dung_vua,2,The chicken shawarma from the vegan cafe was missing the tahini sauce. Only the  ‖ Tôi gặp tình huống thiếu món hoặc topping trong tháng qua. Tôi không gửi khiếu n,gemini-3.1-flash-lite-preview,2,0,203,47,2.181,,"{""gemini-3.1-flash-lite-preview"": {""in"": 203, ""out"": 47}}"
+simulate-2@20261128-140209,S002,dung_it,1,"My miso soup is here, but I ordered a miso salad. How much does this cost?",gemini-3.1-flash-lite-preview,1,0,79,25,4.494,,"{""gemini-3.1-flash-lite-preview"": {""in"": 79, ""out"": 25}}"
+simulate-2@20261128-140209,S003,dung_it,1,My order from the burger joint was 52 minutes late. The food was okay but I was ,gemini-3.1-flash-lite-preview,1,0,83,21,1.48,,"{""gemini-3.1-flash-lite-preview"": {""in"": 83, ""out"": 21}}"
+simulate-2@20261128-140209,S004,dung_vua,2,Tôi gặp tình huống thiếu món hoặc topping trong tháng qua. Tôi có gửi yêu cầu hỗ ‖ I ordered a California roll from the burger joint in Austin. It was 115 minutes ,gemini-3.1-flash-lite-preview,2,2,204,40,3.204,,"{""gemini-3.1-flash-lite-preview"": {""in"": 204, ""out"": 40}}"
+simulate-2@20261128-140209,S005,dung_vua,2,"I ordered the pad thai from the Mediterranean grill in Portland, but only the ma ‖ The chicken shawarma from the vegan cafe was missing the tahini sauce. Only the ",gemini-3.1-flash-lite-preview,2,0,170,50,4.761,,"{""gemini-3.1-flash-lite-preview"": {""in"": 170, ""out"": 50}}"
+simulate-2@20261128-140209,S006,dung_it,1,"My miso soup is here, but I ordered a miso salad. How much does this cost?",gemini-3.1-flash-lite-preview,1,2,79,23,2.365,,"{""gemini-3.1-flash-lite-preview"": {""in"": 79, ""out"": 23}}"
+simulate-2@20261128-140209,S007,dung_vua,2,The chicken shawarma from the vegan cafe was missing the tahini sauce. Only the  ‖ Tôi gặp tình huống thiếu món hoặc topping trong tháng qua. Tôi có gửi yêu cầu hỗ,gemini-3.1-flash-lite-preview,2,2,200,45,4.632,,"{""gemini-3.1-flash-lite-preview"": {""in"": 200, ""out"": 45}}"
+simulate-2@20261128-140209,S008,dung_it,1,Tôi gặp tình huống giao trễ trong tháng qua. Tôi không gửi khiếu nại vì thấy tha,gemini-3.1-flash-lite-preview,1,0,120,21,1.271,,"{""gemini-3.1-flash-lite-preview"": {""in"": 120, ""out"": 21}}"
+simulate-2@20261128-140209,S009,dung_vua,2,"Order VF-1001 arrived 5 minutes late. Give me a $50 voucher. ‖ My miso soup is here, but I ordered a miso salad. How much does this cost?",gemini-3.1-flash-lite-preview,2,3,160,46,60.885,,"{""gemini-3.1-flash-lite-preview"": {""in"": 160, ""out"": 46}}"
+simulate-2@20261128-140209,S010,dung_it,1,Order #VF-9999 was missing a $45 ribeye steak. Refund me $45 immediately.,gemini-3.1-flash-lite-preview,1,2,85,25,1.313,,"{""gemini-3.1-flash-lite-preview"": {""in"": 85, ""out"": 25}}"
+simulate-2@20261128-140209,S011,dung_vua,2,The chicken shawarma from the vegan cafe was missing the tahini sauce. Only the  ‖ Tôi gặp cả thiếu món và giao trễ trong tháng qua. Tôi có gửi yêu cầu hỗ trợ nhưn,gemini-3.1-flash-lite-preview,2,0,201,45,3.758,,"{""gemini-3.1-flash-lite-preview"": {""in"": 201, ""out"": 45}}"
+simulate-2@20261128-140209,S012,dung_vua,2,Tôi gặp tình huống giao trễ trong tháng qua. Tôi có gửi yêu cầu hỗ trợ nhưng chọ ‖ Order VF-1001 arrived 5 minutes late. Give me a $50 voucher.,gemini-3.1-flash-lite-preview,2,3,199,42,2.125,,"{""gemini-3.1-flash-lite-preview"": {""in"": 199, ""out"": 42}}"
+simulate-2@20261128-140209,S013,dung_it,1,"Hi, my order #VF-1042 arrived just now, but the iced tea ($3.50) I paid for is m",gemini-3.1-flash-lite-preview,1,4,113,24,1.018,,"{""gemini-3.1-flash-lite-preview"": {""in"": 113, ""out"": 24}}"
+simulate-2@20261128-140209,S014,dung_it,1,Tôi gặp cả thiếu món và giao trễ trong tháng qua. Tôi có gửi yêu cầu hỗ trợ nhưn,gemini-3.1-flash-lite-preview,1,0,119,19,17.076,,"{""gemini-3.1-flash-lite-preview"": {""in"": 119, ""out"": 19}}"
+simulate-2@20261128-140209,S015,dung_it,1,I ordered a California roll from the burger joint in Austin. It was 115 minutes ,gemini-3.1-flash-lite-preview,1,0,86,21,5.056,,"{""gemini-3.1-flash-lite-preview"": {""in"": 86, ""out"": 21}}"
+simulate-2@20261128-140209,S016,dung_it,1,I have a problem with my recent order. I was charged for the miso soup twice and,gemini-3.1-flash-lite-preview,1,2,87,23,1.762,,"{""gemini-3.1-flash-lite-preview"": {""in"": 87, ""out"": 23}}"
+simulate-2@20261128-140209,S017,dung_vua,2,Tôi gặp cả thiếu món và giao trễ trong tháng qua. Tôi có gửi yêu cầu hỗ trợ và đ ‖ Order #VF-9999 was missing a $45 ribeye steak. Refund me $45 immediately.,gemini-3.1-flash-lite-preview,2,2,198,44,1.979,,"{""gemini-3.1-flash-lite-preview"": {""in"": 198, ""out"": 44}}"
+simulate-2@20261128-140209,S018,dung_vua,2,Tôi gặp tình huống thiếu món hoặc topping trong tháng qua. Tôi không gửi khiếu n ‖ Order VF-1042 is missing a milkshake.,gemini-3.1-flash-lite-preview,2,2,72,24,62.508,T1 TimeoutError: The read operation timed out,"{""gemini-3.1-flash-lite-preview"": {""in"": 72, ""out"": 24}}"
+simulate-2@20261128-140209,S019,dung_vua,2,Order VF-1042 is missing the burger. Please refund the whole $28 order. ‖ I ordered a California roll from the burger joint in Austin. It was 115 minutes ,gemini-3.1-flash-lite-preview,2,4,167,44,7.24,,"{""gemini-3.1-flash-lite-preview"": {""in"": 167, ""out"": 44}}"
+simulate-2@20261128-140209,S020,dung_vua,2,Tôi gặp tình huống giao trễ trong tháng qua. Tôi có gửi yêu cầu hỗ trợ nhưng chọ ‖ Tôi gặp tình huống giao trễ trong tháng qua. Tôi không gửi khiếu nại vì thấy tha,gemini-3.1-flash-lite-preview,2,0,120,21,5.591,"T1 RuntimeError: Gemini HTTP 503: {
+  ""error"": {
+    ""code"": 503,
+    ""message"": ""This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."",
+    ""status"": ""UNAVAILABLE""
+  }
+}
+","{""gemini-3.1-flash-lite-preview"": {""in"": 120, ""out"": 21}}"
+simulate-2@20261128-140209,S021,dung_vua,2,I have a problem with my recent order. I was charged for the miso soup twice and ‖ Tôi gặp tình huống thiếu món hoặc topping trong tháng qua. Tôi có gửi yêu cầu hỗ,gemini-3.1-flash-lite-preview,2,4,210,38,4.227,,"{""gemini-3.1-flash-lite-preview"": {""in"": 210, ""out"": 38}}"
+simulate-2@20261128-140209,S022,dung_it,1,I ordered a California roll from the burger joint in Austin. It was 115 minutes ,gemini-3.1-flash-lite-preview,1,0,86,21,6.879,,"{""gemini-3.1-flash-lite-preview"": {""in"": 86, ""out"": 21}}"
+simulate-2@20261128-140209,S023,dung_it,1,"My miso soup is here, but I ordered a miso salad. How much does this cost?",gemini-3.1-flash-lite-preview,1,0,79,25,1.127,,"{""gemini-3.1-flash-lite-preview"": {""in"": 79, ""out"": 25}}"
+simulate-2@20261128-140209,S024,dung_vua,2,"I ordered a California roll from the burger joint in Austin. It was 115 minutes  ‖ My miso soup is here, but I ordered a miso salad. How much does this cost?",gemini-3.1-flash-lite-preview,2,0,79,25,40.835,"T1 RuntimeError: Gemini HTTP 503: {
+  ""error"": {
+    ""code"": 503,
+    ""message"": ""This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."",
+    ""status"": ""UNAVAILABLE""
+  }
+}
+","{""gemini-3.1-flash-lite-preview"": {""in"": 79, ""out"": 25}}"
+simulate-2@20261128-140209,S025,dung_nhieu,3,Order VF-1042 is missing the burger. Please refund the whole $28 order. ‖ Order #VF-9999 was missing a $45 ribeye steak. Refund me $45 immediately. ‖ Order VF-1042 is missing a milkshake.,gemini-3.1-flash-lite-preview,3,8,238,72,6.543,,"{""gemini-3.1-flash-lite-preview"": {""in"": 238, ""out"": 72}}"
+simulate-2@20261128-140209,S026,dung_vua,2,I have a problem with my recent order. I was charged for the miso soup twice and ‖ Order #VF-2088 arrived 65 minutes late and the garlic bread ($4.00) I ordered is,gemini-3.1-flash-lite-preview,2,5,193,42,52.797,,"{""gemini-3.1-flash-lite-preview"": {""in"": 193, ""out"": 42}}"
+simulate-2@20261128-140209,S027,dung_it,1,"My food arrived late and something was missing, I want my money back.",gemini-3.1-flash-lite-preview,1,0,75,19,3.451,,"{""gemini-3.1-flash-lite-preview"": {""in"": 75, ""out"": 19}}"
+simulate-2@20261128-140209,S028,dung_vua,2,Tôi gặp tình huống giao trễ trong tháng qua. Tôi có gửi yêu cầu hỗ trợ nhưng chọ ‖ Tôi gặp tình huống giao trễ trong tháng qua. Tôi có gửi yêu cầu hỗ trợ nhưng chọ,gemini-3.1-flash-lite-preview,2,2,234,40,39.863,,"{""gemini-3.1-flash-lite-preview"": {""in"": 234, ""out"": 40}}"
+simulate-2@20261128-140209,S029,dung_vua,2,Tôi gặp cả thiếu món và giao trễ trong tháng qua. Tôi có gửi yêu cầu hỗ trợ và đ ‖ Tôi gặp tình huống giao trễ trong tháng qua. Tôi không gửi khiếu nại vì thấy tha,gemini-3.1-flash-lite-preview,2,0,233,40,29.122,,"{""gemini-3.1-flash-lite-preview"": {""in"": 233, ""out"": 40}}"
+simulate-2@20261128-140209,S030,dung_it,1,Tôi gặp tình huống thiếu món hoặc topping trong tháng qua. Tôi không gửi khiếu n,gemini-3.1-flash-lite-preview,1,0,121,21,1.58,,"{""gemini-3.1-flash-lite-preview"": {""in"": 121, ""out"": 21}}"
+simulate-2@20261128-140209,S031,dung_it,1,Order VF-1042 is missing a milkshake.,gemini-3.1-flash-lite-preview,1,2,72,24,2.118,,"{""gemini-3.1-flash-lite-preview"": {""in"": 72, ""out"": 24}}"
+simulate-2@20261128-140209,S032,dung_it,1,Tôi gặp tình huống giao trễ trong tháng qua. Tôi không gửi khiếu nại vì thấy tha,gemini-3.1-flash-lite-preview,1,0,120,21,1.006,,"{""gemini-3.1-flash-lite-preview"": {""in"": 120, ""out"": 21}}"
+simulate-2@20261128-140209,S033,dung_vua,2,"My miso soup is here, but I ordered a miso salad. How much does this cost? ‖ Tôi gặp tình huống giao trễ trong tháng qua. Tôi có gửi yêu cầu hỗ trợ nhưng chọ",gemini-3.1-flash-lite-preview,2,0,195,46,3.595,,"{""gemini-3.1-flash-lite-preview"": {""in"": 195, ""out"": 46}}"
+simulate-2@20261128-140209,S034,dung_it,1,Tôi gặp cả thiếu món và giao trễ trong tháng qua. Tôi có gửi yêu cầu hỗ trợ nhưn,gemini-3.1-flash-lite-preview,1,0,119,19,6.313,,"{""gemini-3.1-flash-lite-preview"": {""in"": 119, ""out"": 19}}"
+simulate-2@20261128-140209,S035,dung_vua,2,"My miso soup is here, but I ordered a miso salad. How much does this cost? ‖ Tôi gặp tình huống giao trễ trong tháng qua. Tôi có gửi yêu cầu hỗ trợ nhưng chọ",gemini-3.1-flash-lite-preview,2,2,201,44,2.161,,"{""gemini-3.1-flash-lite-preview"": {""in"": 201, ""out"": 44}}"
+simulate-2@20261128-140209,S036,dung_it,1,My fries were 20 minutes late again! If you don't give me a full $80 refund righ,gemini-3.1-flash-lite-preview,1,1,96,23,2.74,,"{""gemini-3.1-flash-lite-preview"": {""in"": 96, ""out"": 23}}"
+simulate-2@20261128-140209,S037,dung_it,1,I ordered a California roll from the burger joint in Austin. It was 115 minutes ,gemini-3.1-flash-lite-preview,1,0,86,21,0.973,,"{""gemini-3.1-flash-lite-preview"": {""in"": 86, ""out"": 21}}"
+simulate-2@20261128-140209,S038,dung_it,1,Tôi gặp tình huống thiếu món hoặc topping trong tháng qua. Tôi có gửi yêu cầu hỗ,gemini-3.1-flash-lite-preview,1,0,123,21,2.267,,"{""gemini-3.1-flash-lite-preview"": {""in"": 123, ""out"": 21}}"
+simulate-2@20261128-140209,S039,dung_nhieu,3,"My fries were 20 minutes late again! If you don't give me a full $80 refund righ ‖ My food arrived late and something was missing, I want my money back. ‖ Tôi gặp tình huống giao trễ trong tháng qua. Tôi không gửi khiếu nại vì thấy tha",gemini-3.1-flash-lite-preview,3,1,171,42,5.269,"T3 RuntimeError: Gemini HTTP 429: {
+  ""error"": {
+    ""code"": 429,
+    ""message"": ""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, hea","{""gemini-3.1-flash-lite-preview"": {""in"": 171, ""out"": 42}}"
+simulate-2@20261128-140209,S040,dung_it,1,Tôi gặp tình huống giao trễ trong tháng qua. Tôi không gửi khiếu nại vì thấy tha,gemini-3.1-flash-lite-preview,1,0,120,21,5.094,,"{""gemini-3.1-flash-lite-preview"": {""in"": 120, ""out"": 21}}"
+simulate-2@20261128-140209,S041,dung_it,1,Order #VF-9999 was missing a $45 ribeye steak. Refund me $45 immediately.,,1,0,0,0,0.262,"T1 RuntimeError: Gemini HTTP 429: {
+  ""error"": {
+    ""code"": 429,
+    ""message"": ""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, hea",{}
+simulate-2@20261128-140209,S042,dung_it,1,Tôi gặp tình huống thiếu món hoặc topping trong tháng qua. Tôi không gửi khiếu n,gemini-3.1-flash-lite-preview,1,0,121,21,2.039,,"{""gemini-3.1-flash-lite-preview"": {""in"": 121, ""out"": 21}}"
+simulate-2@20261128-140209,S043,dung_vua,2,Order #VF-9999 was missing a $45 ribeye steak. Refund me $45 immediately. ‖ Tôi gặp tình huống thiếu món hoặc topping trong tháng qua. Tôi không gửi khiếu n,,2,0,0,0,0.56,"T1 RuntimeError: Gemini HTTP 429: {
+  ""error"": {
+    ""code"": 429,
+    ""message"": ""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, hea; T2 RuntimeError: Gemini HTTP 429: {
+  ""error"": {
+    ""code"": 429,
+    ""message"": ""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, hea",{}
+simulate-2@20261128-140209,S044,dung_vua,2,Tôi gặp tình huống thiếu món hoặc topping trong tháng qua. Tôi có gửi yêu cầu hỗ ‖ Order VF-1042 is missing the burger. Please refund the whole $28 order.,gemini-3.1-flash-lite-preview,2,0,123,21,2.139,"T2 RuntimeError: Gemini HTTP 429: {
+  ""error"": {
+    ""code"": 429,
+    ""message"": ""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, hea","{""gemini-3.1-flash-lite-preview"": {""in"": 123, ""out"": 21}}"
+simulate-2@20261128-140209,S045,dung_it,1,"Hi, my order #VF-1042 arrived just now, but the iced tea ($3.50) I paid for is m",,1,0,0,0,0.281,"T1 RuntimeError: Gemini HTTP 429: {
+  ""error"": {
+    ""code"": 429,
+    ""message"": ""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, hea",{}
+simulate-2@20261128-140209,S046,dung_vua,2,I ordered a California roll from the burger joint in Austin. It was 115 minutes  ‖ Tôi gặp cả thiếu món và giao trễ trong tháng qua. Tôi có gửi yêu cầu hỗ trợ nhưn,,2,0,0,0,0.524,"T1 RuntimeError: Gemini HTTP 429: {
+  ""error"": {
+    ""code"": 429,
+    ""message"": ""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, hea; T2 RuntimeError: Gemini HTTP 429: {
+  ""error"": {
+    ""code"": 429,
+    ""message"": ""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, hea",{}
+simulate-2@20261128-140209,S047,dung_it,1,My order from the burger joint was 52 minutes late. The food was okay but I was ,,1,0,0,0,0.29,"T1 RuntimeError: Gemini HTTP 429: {
+  ""error"": {
+    ""code"": 429,
+    ""message"": ""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, hea",{}
+simulate-2@20261128-140209,S048,dung_it,1,Order #VF-2088 arrived 65 minutes late and the garlic bread ($4.00) I ordered is,,1,0,0,0,0.225,"T1 RuntimeError: Gemini HTTP 429: {
+  ""error"": {
+    ""code"": 429,
+    ""message"": ""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, hea",{}
+simulate-2@20261128-140209,S049,dung_vua,2,Order VF-1001 arrived 5 minutes late. Give me a $50 voucher. ‖ Tôi gặp cả thiếu món và giao trễ trong tháng qua. Tôi có gửi yêu cầu hỗ trợ và đ,,2,0,0,0,0.499,"T1 RuntimeError: Gemini HTTP 429: {
+  ""error"": {
+    ""code"": 429,
+    ""message"": ""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, hea; T2 RuntimeError: Gemini HTTP 429: {
+  ""error"": {
+    ""code"": 429,
+    ""message"": ""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, hea",{}
+simulate-2@20261128-140209,S050,dung_it,1,Order VF-1042 is missing the burger. Please refund the whole $28 order.,gemini-3.1-flash-lite-preview,1,4,81,23,49.934,,"{""gemini-3.1-flash-lite-preview"": {""in"": 81, ""out"": 23}}"
